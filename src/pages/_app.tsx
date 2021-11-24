@@ -1,10 +1,11 @@
 import { ChakraProvider } from '@chakra-ui/react'
 
 import UsersProvider from 'contexts/users'
+import theme from 'styles/theme'
 
 function MyApp({ Component, pageProps }) {
   return (
-    <ChakraProvider>
+    <ChakraProvider theme={theme}>
       <UsersProvider>
         <Component {...pageProps} />
       </UsersProvider>
